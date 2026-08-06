@@ -1,6 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import retrato from "@/assets/maria-billig.jpg.asset.json";
 import { BookingForm } from "@/components/BookingForm";
+import { Galeria } from "@/components/Galeria";
+import {
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+  TELEFONE_EXIBICAO,
+  WHATSAPP_LINK,
+} from "@/lib/contato";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
