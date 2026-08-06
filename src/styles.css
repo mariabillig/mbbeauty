@@ -157,3 +157,41 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+  }
+}
+
+@utility text-gilded {
+  background-image: var(--gradient-gold);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility rule-gold {
+  background-image: var(--gradient-gold);
+  height: 1px;
+  width: 100%;
+}
+
+@utility surface-soft {
+  background-image: var(--gradient-soft);
+}
+
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
