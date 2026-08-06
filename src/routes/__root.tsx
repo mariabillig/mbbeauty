@@ -123,13 +123,40 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function SiteHeader() {
+  const linkClass =
+    "text-[0.68rem] uppercase tracking-[0.28em] text-muted-foreground transition-colors hover:text-foreground";
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+        <Link to="/" className="font-display text-lg tracking-wide">
+          Maria Billig
+        </Link>
+        <div className="flex items-center gap-6">
+          <Link to="/servicos" className={linkClass}>
+            Serviços
+          </Link>
+          <Link to="/" hash="galeria" className={linkClass}>
+            Galeria
+          </Link>
+          <Link to="/" hash="agenda" className={linkClass}>
+            Agenda
+          </Link>
+        </div>
+      </nav>
+    </header>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
+      <SiteHeader />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );
 }
+
