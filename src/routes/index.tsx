@@ -139,11 +139,35 @@ function Index() {
               </article>
             ))}
           </div>
+          <div className="mt-14 text-center">
+            <Link
+              to="/servicos"
+              className="inline-flex items-center justify-center rounded-sm border border-gold px-10 py-4 text-xs uppercase tracking-[0.28em] transition-all duration-500 hover:bg-gold hover:text-primary-foreground"
+            >
+              Conheça cada procedimento
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Galeria */}
+      <section id="galeria" className="px-6 py-28">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="eyebrow">Galeria</p>
+            <h2 className="mt-6 text-4xl md:text-5xl">
+              O olhar nos <span className="italic text-gilded">detalhes</span>
+            </h2>
+            <div className="rule-gold mx-auto my-8 max-w-[5rem]" />
+          </div>
+          <div className="mt-12">
+            <Galeria />
+          </div>
         </div>
       </section>
 
       {/* Agenda */}
-      <section id="agenda" className="px-6 py-28">
+      <section id="agenda" className="surface-soft px-6 py-28">
         <div className="mx-auto max-w-3xl">
           <div className="mb-14 text-center">
             <p className="eyebrow">Agenda</p>
@@ -151,8 +175,8 @@ function Index() {
               Reserve o seu <span className="italic text-gilded">momento</span>
             </h2>
             <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Preencha os dados abaixo e sua solicitação será enviada
-              diretamente para mim.
+              Escolha a data e o horário no calendário. Sua solicitação chega
+              direto para mim pelo WhatsApp {TELEFONE_EXIBICAO}.
             </p>
           </div>
           <BookingForm />
@@ -162,7 +186,16 @@ function Index() {
       <footer className="border-t border-border px-6 py-14 text-center">
         <p className="font-display text-2xl">Maria Billig Beauty</p>
         <p className="eyebrow mt-4">Sobrancelhas · Lábios · Autoestima</p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.24em] text-muted-foreground">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            WhatsApp {TELEFONE_EXIBICAO}
+          </a>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            Instagram {INSTAGRAM_HANDLE}
+          </a>
+        </div>
       </footer>
+
     </main>
   );
 }
