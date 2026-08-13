@@ -151,13 +151,16 @@ function SiteHeader() {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const standalone = pathname.startsWith("/symons-arts");
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteHeader />
+      {!standalone && <SiteHeader />}
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );
 }
+
 
