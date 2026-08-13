@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as SymonsArtsRouteImport } from './routes/symons-arts'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const ServicosRoute = ServicosRouteImport.update({
   path: '/servicos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SymonsArtsRoute = SymonsArtsRouteImport.update({
+  id: '/symons-arts',
+  path: '/symons-arts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/servicos': typeof ServicosRoute
+  '/symons-arts': typeof SymonsArtsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/servicos': typeof ServicosRoute
+  '/symons-arts': typeof SymonsArtsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/servicos': typeof ServicosRoute
+  '/symons-arts': typeof SymonsArtsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/servicos'
+  fullPaths: '/' | '/servicos' | '/symons-arts'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/servicos'
-  id: '__root__' | '/' | '/servicos'
+  to: '/' | '/servicos' | '/symons-arts'
+  id: '__root__' | '/' | '/servicos' | '/symons-arts'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServicosRoute: typeof ServicosRoute
+  SymonsArtsRoute: typeof SymonsArtsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/symons-arts': {
+      id: '/symons-arts'
+      path: '/symons-arts'
+      fullPath: '/symons-arts'
+      preLoaderRoute: typeof SymonsArtsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServicosRoute: ServicosRoute,
+  SymonsArtsRoute: SymonsArtsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
