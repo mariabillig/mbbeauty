@@ -28,7 +28,7 @@ export const Route = createFileRoute("/symons-arts")({
   }),
 });
 
-const WHATSAPP_NUMBER = "55489988336968";
+const WHATSAPP_NUMBER = "5548988336968";
 const WHATSAPP =
   "https://wa.me/" + WHATSAPP_NUMBER +
   "?text=" +
