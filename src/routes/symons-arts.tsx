@@ -28,8 +28,10 @@ export const Route = createFileRoute("/symons-arts")({
   }),
 });
 
+const WHATSAPP_NUMBER = "55489988336968";
 const WHATSAPP =
-  "https://wa.me/?text=" +
+  "https://wa.me/" + WHATSAPP_NUMBER +
+  "?text=" +
   encodeURIComponent("Olá Symon's Arts! Gostaria de um orçamento de personalizados.");
 
 const produtos = [
