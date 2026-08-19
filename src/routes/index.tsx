@@ -60,11 +60,13 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
           <div>
             <p className="eyebrow">Estúdio de beleza · desde 2018</p>
-            <h1 className="mt-6 text-5xl leading-[1.05] md:text-7xl">
+            <h1 className="mt-8 font-script text-6xl leading-[1.05] text-gilded md:text-8xl">
               Maria Billig
-              <span className="block text-gilded italic">Beauty</span>
             </h1>
-            <div className="rule-gold my-8 max-w-[7rem]" />
+            <p className="mt-4 font-display text-sm uppercase tracking-[0.5em] text-muted-foreground">
+              Beauty
+            </p>
+            <div className="rule-gold my-9 max-w-[7rem]" />
             <p className="max-w-md text-base leading-relaxed text-muted-foreground">
               Nanopigmentação de sobrancelhas e micropigmentação labial — a arte
               sutil de revelar a beleza que já é sua.
@@ -79,23 +81,28 @@ function Index() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-sm bg-blush" aria-hidden />
-            <img
-              src={retrato.url}
-              alt="Maria Billig, especialista em nanopigmentação e micropigmentação"
-              className="shadow-elegant relative w-full rounded-sm object-cover"
-              loading="eager"
-            />
+            <div className="frame-gold relative">
+              <img
+                src={retrato.url}
+                alt="Maria Billig, especialista em nanopigmentação e micropigmentação"
+                className="shadow-elegant w-full rounded-sm object-cover"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Sobre */}
       <section className="px-6 py-28">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Quem sou</p>
           <h2 className="mt-6 text-4xl md:text-5xl">
-            Cada traço carrega <span className="italic text-gilded">uma história</span>
+            Cada traço carrega{" "}
+            <span className="font-script text-5xl text-gilded md:text-6xl">uma história</span>
           </h2>
+
           <div className="rule-gold mx-auto my-10 max-w-[5rem]" />
           <div className="space-y-6 text-base leading-loose text-muted-foreground">
             <p>
@@ -121,8 +128,12 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
             <p className="eyebrow">Procedimentos</p>
-            <h2 className="mt-6 text-4xl md:text-5xl">Assinatura Billig</h2>
+            <h2 className="mt-6 font-script text-5xl text-gilded md:text-6xl">
+              Assinatura Billig
+            </h2>
+            <div className="ornament mt-8 text-xs">✦</div>
           </div>
+
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {servicos.map((s, i) => (
               <article
@@ -156,8 +167,10 @@ function Index() {
           <div className="text-center">
             <p className="eyebrow">Galeria</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
-              O olhar nos <span className="italic text-gilded">detalhes</span>
+              O olhar nos{" "}
+              <span className="font-script text-5xl text-gilded md:text-6xl">detalhes</span>
             </h2>
+
             <div className="rule-gold mx-auto my-8 max-w-[5rem]" />
           </div>
           <div className="mt-12">
@@ -172,8 +185,10 @@ function Index() {
           <div className="mb-14 text-center">
             <p className="eyebrow">Agenda</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
-              Reserve o seu <span className="italic text-gilded">momento</span>
+              Reserve o seu{" "}
+              <span className="font-script text-5xl text-gilded md:text-6xl">momento</span>
             </h2>
+
             <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
               Escolha a data e o horário no calendário. Sua solicitação chega
               direto para mim pelo WhatsApp {TELEFONE_EXIBICAO}.
@@ -183,9 +198,10 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border px-6 py-14 text-center">
-        <p className="font-display text-2xl">Maria Billig Beauty</p>
-        <p className="eyebrow mt-4">Sobrancelhas · Lábios · Autoestima</p>
+      <footer className="border-t border-border px-6 py-16 text-center">
+        <p className="font-script text-4xl text-gilded">Maria Billig Beauty</p>
+        <p className="eyebrow mt-5">Sobrancelhas · Lábios · Autoestima</p>
+
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.24em] text-muted-foreground">
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
             WhatsApp {TELEFONE_EXIBICAO}

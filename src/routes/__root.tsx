@@ -99,8 +99,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Anton&family=Manrope:wght@300;400;600;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&family=Parisienne&family=Anton&family=Manrope:wght@300;400;600;800&display=swap",
       },
+
 
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
@@ -132,9 +133,10 @@ function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
-        <Link to="/" className="font-display text-lg tracking-wide">
+        <Link to="/" className="font-script text-2xl leading-none text-gilded">
           Maria Billig
         </Link>
+
         <div className="flex items-center gap-6">
           <Link to="/servicos" className={linkClass}>
             Serviços

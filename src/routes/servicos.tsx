@@ -90,15 +90,17 @@ function Servicos() {
     <main className="min-h-screen bg-background text-foreground">
       <section className="surface-soft px-6 pt-20 pb-20 text-center">
         <p className="eyebrow">Procedimentos</p>
-        <h1 className="mt-6 text-5xl md:text-6xl">
-          O que é cada <span className="italic text-gilded">procedimento</span>
+        <h1 className="mt-6 text-4xl md:text-5xl">
+          O que é cada{" "}
+          <span className="font-script text-5xl text-gilded md:text-7xl">procedimento</span>
         </h1>
-        <div className="rule-gold mx-auto my-8 max-w-[5rem]" />
-        <p className="mx-auto max-w-xl text-sm leading-relaxed text-muted-foreground">
+        <div className="ornament mt-8 text-xs">✦</div>
+        <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-muted-foreground">
           Técnica, tempo, durabilidade e cuidados — tudo explicado com
           transparência para você escolher com segurança.
         </p>
       </section>
+
 
       <section className="px-6 py-24">
         <div className="mx-auto max-w-5xl space-y-20">
@@ -142,8 +144,10 @@ function Servicos() {
       <section className="px-6 py-24 text-center">
         <p className="eyebrow">Agendamento</p>
         <h2 className="mt-6 text-4xl md:text-5xl">
-          Vamos reservar o seu <span className="italic text-gilded">horário</span>
+          Vamos reservar o seu{" "}
+          <span className="font-script text-5xl text-gilded md:text-6xl">horário</span>
         </h2>
+
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Link
             to="/"
