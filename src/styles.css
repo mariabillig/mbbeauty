@@ -64,10 +64,12 @@
 @theme inline {
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Parisienne", "Cormorant Garamond", cursive;
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-blush: var(--blush);
 }
+
 
 :root {
   --radius: 0.25rem;
