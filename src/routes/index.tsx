@@ -60,11 +60,13 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
           <div>
             <p className="eyebrow">Estúdio de beleza · desde 2018</p>
-            <h1 className="mt-6 text-5xl leading-[1.05] md:text-7xl">
+            <h1 className="mt-8 font-script text-6xl leading-[1.05] text-gilded md:text-8xl">
               Maria Billig
-              <span className="block text-gilded italic">Beauty</span>
             </h1>
-            <div className="rule-gold my-8 max-w-[7rem]" />
+            <p className="mt-4 font-display text-sm uppercase tracking-[0.5em] text-muted-foreground">
+              Beauty
+            </p>
+            <div className="rule-gold my-9 max-w-[7rem]" />
             <p className="max-w-md text-base leading-relaxed text-muted-foreground">
               Nanopigmentação de sobrancelhas e micropigmentação labial — a arte
               sutil de revelar a beleza que já é sua.
@@ -79,15 +81,18 @@ function Index() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-sm bg-blush" aria-hidden />
-            <img
-              src={retrato.url}
-              alt="Maria Billig, especialista em nanopigmentação e micropigmentação"
-              className="shadow-elegant relative w-full rounded-sm object-cover"
-              loading="eager"
-            />
+            <div className="frame-gold relative">
+              <img
+                src={retrato.url}
+                alt="Maria Billig, especialista em nanopigmentação e micropigmentação"
+                className="shadow-elegant w-full rounded-sm object-cover"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Sobre */}
       <section className="px-6 py-28">
