@@ -99,8 +99,10 @@ function Index() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Quem sou</p>
           <h2 className="mt-6 text-4xl md:text-5xl">
-            Cada traço carrega <span className="italic text-gilded">uma história</span>
+            Cada traço carrega{" "}
+            <span className="font-script text-5xl text-gilded md:text-6xl">uma história</span>
           </h2>
+
           <div className="rule-gold mx-auto my-10 max-w-[5rem]" />
           <div className="space-y-6 text-base leading-loose text-muted-foreground">
             <p>
@@ -126,8 +128,12 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
             <p className="eyebrow">Procedimentos</p>
-            <h2 className="mt-6 text-4xl md:text-5xl">Assinatura Billig</h2>
+            <h2 className="mt-6 font-script text-5xl text-gilded md:text-6xl">
+              Assinatura Billig
+            </h2>
+            <div className="ornament mt-8 text-xs">✦</div>
           </div>
+
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {servicos.map((s, i) => (
               <article
@@ -161,8 +167,10 @@ function Index() {
           <div className="text-center">
             <p className="eyebrow">Galeria</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
-              O olhar nos <span className="italic text-gilded">detalhes</span>
+              O olhar nos{" "}
+              <span className="font-script text-5xl text-gilded md:text-6xl">detalhes</span>
             </h2>
+
             <div className="rule-gold mx-auto my-8 max-w-[5rem]" />
           </div>
           <div className="mt-12">
@@ -177,8 +185,10 @@ function Index() {
           <div className="mb-14 text-center">
             <p className="eyebrow">Agenda</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
-              Reserve o seu <span className="italic text-gilded">momento</span>
+              Reserve o seu{" "}
+              <span className="font-script text-5xl text-gilded md:text-6xl">momento</span>
             </h2>
+
             <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
               Escolha a data e o horário no calendário. Sua solicitação chega
               direto para mim pelo WhatsApp {TELEFONE_EXIBICAO}.
@@ -188,9 +198,10 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border px-6 py-14 text-center">
-        <p className="font-display text-2xl">Maria Billig Beauty</p>
-        <p className="eyebrow mt-4">Sobrancelhas · Lábios · Autoestima</p>
+      <footer className="border-t border-border px-6 py-16 text-center">
+        <p className="font-script text-4xl text-gilded">Maria Billig Beauty</p>
+        <p className="eyebrow mt-5">Sobrancelhas · Lábios · Autoestima</p>
+
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.24em] text-muted-foreground">
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
             WhatsApp {TELEFONE_EXIBICAO}
