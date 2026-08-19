@@ -163,12 +163,28 @@
 @layer base {
   body {
     font-family: var(--font-sans);
-    letter-spacing: 0.01em;
+    font-weight: 300;
+    letter-spacing: 0.015em;
   }
   h1, h2, h3 {
     font-family: var(--font-display);
     font-weight: 300;
+    letter-spacing: 0.005em;
   }
+  ::selection {
+    background: var(--blush);
+    color: var(--foreground);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
 }
 
 @utility text-gilded {
@@ -192,11 +208,48 @@
 }
 
 @utility eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.32em;
+  font-size: 0.68rem;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
+  font-weight: 400;
   color: var(--muted-foreground);
 }
+
+/* Ornamento: filete dourado com losango central */
+@utility ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  color: var(--gold);
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 3.5rem;
+    background-image: linear-gradient(90deg, transparent, var(--gold));
+  }
+
+  &::after {
+    background-image: linear-gradient(90deg, var(--gold), transparent);
+  }
+}
+
+/* Moldura fina dourada para imagens */
+@utility frame-gold {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0.75rem;
+    border: 1px solid color-mix(in oklab, var(--gold) 55%, transparent);
+    pointer-events: none;
+  }
+}
+
 
 /* ============================================================
    Symon's Arts — tema escuro (preto, branco, vermelho, dourado)
