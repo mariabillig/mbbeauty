@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import retrato from "@/assets/maria-billig.jpg.asset.json";
 import { BookingForm } from "@/components/BookingForm";
 import { Galeria } from "@/components/Galeria";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
