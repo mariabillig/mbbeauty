@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import retrato from "@/assets/maria-billig.jpg.asset.json";
 import { BookingForm } from "@/components/BookingForm";
 import { Galeria } from "@/components/Galeria";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
@@ -55,6 +56,7 @@ const servicos = [
 function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <WhatsAppButton />
       {/* Hero */}
       <section className="surface-soft relative overflow-hidden px-6 pt-16 pb-24 md:pt-24">
         <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
@@ -71,12 +73,22 @@ function Index() {
               Nanopigmentação de sobrancelhas e micropigmentação labial — a arte
               sutil de revelar a beleza que já é sua.
             </p>
-            <a
-              href="#agenda"
-              className="mt-10 inline-flex items-center justify-center rounded-sm border border-gold px-10 py-4 text-xs uppercase tracking-[0.28em] transition-all duration-500 hover:bg-gold hover:text-primary-foreground"
-            >
-              Agendar horário
-            </a>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#agenda"
+                className="inline-flex items-center justify-center rounded-sm border border-gold px-10 py-4 text-xs uppercase tracking-[0.28em] transition-all duration-500 hover:bg-gold hover:text-primary-foreground"
+              >
+                Agendar horário
+              </a>
+              <a
+                href="https://wa.me/5548988336968?text=Ol%C3%A1%20Maria!%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-sm bg-gold px-10 py-4 text-xs uppercase tracking-[0.28em] text-primary-foreground transition-all duration-500 hover:opacity-90"
+              >
+                WhatsApp
+              </a>
+            </div>
           </div>
 
           <div className="relative">
