@@ -81,7 +81,7 @@ function Index() {
                 Agendar horário
               </a>
               <a
-                href="https://wa.me/5548988336968?text=Ol%C3%A1%20Maria!%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar."
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-sm bg-gold px-10 py-4 text-xs uppercase tracking-[0.28em] text-primary-foreground transition-all duration-500 hover:opacity-90"
