@@ -56,6 +56,7 @@ const servicos = [
 function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <WhatsAppButton />
       {/* Hero */}
       <section className="surface-soft relative overflow-hidden px-6 pt-16 pb-24 md:pt-24">
         <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
