@@ -1,6 +1,6 @@
-const WHATSAPP_CONTATO = `https://wa.me/5548988336968?text=${encodeURIComponent(
-  "Olá Maria! Vim pelo site e gostaria de conversar.",
-)}`;
+import { WHATSAPP_LINK } from "@/lib/contato";
+
+const WHATSAPP_CONTATO = WHATSAPP_LINK;
 
 export function WhatsAppButton() {
   return (
